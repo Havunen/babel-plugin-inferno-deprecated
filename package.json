@@ -1,42 +1,41 @@
 {
   "_args": [
     [
-      "babel-plugin-inferno@^0.7.3",
-      "C:\\GIT\\inferno"
+      "babel-plugin-inferno@git+https://github.com/Havunen/babel-plugin-inferno.git",
+      "C:\\Git\\Severa\\UI"
     ]
   ],
-  "_from": "babel-plugin-inferno@>=0.7.3 <0.8.0",
-  "_id": "babel-plugin-inferno@0.7.3",
+  "_from": "git+https://github.com/Havunen/babel-plugin-inferno.git",
+  "_id": "babel-plugin-inferno@0.7.2",
   "_inCache": true,
   "_installable": true,
   "_location": "/babel-plugin-inferno",
-  "_nodeVersion": "6.2.0",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/babel-plugin-inferno-0.7.3.tgz_1467494960557_0.4980583693832159"
-  },
-  "_npmUser": {
-    "email": "dg@domgan.com",
-    "name": "trueadm"
-  },
-  "_npmVersion": "3.8.9",
   "_phantomChildren": {},
   "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/Havunen/babel-plugin-inferno/master/package.json",
+      "gitUrl": "git://github.com/Havunen/babel-plugin-inferno.git",
+      "httpsUrl": "git+https://github.com/Havunen/babel-plugin-inferno.git",
+      "shortcut": "github:Havunen/babel-plugin-inferno",
+      "ssh": "git@github.com:Havunen/babel-plugin-inferno.git",
+      "sshUrl": "git+ssh://git@github.com/Havunen/babel-plugin-inferno.git",
+      "type": "github"
+    },
     "name": "babel-plugin-inferno",
-    "raw": "babel-plugin-inferno@^0.7.3",
-    "rawSpec": "^0.7.3",
+    "raw": "babel-plugin-inferno@git+https://github.com/Havunen/babel-plugin-inferno.git",
+    "rawSpec": "git+https://github.com/Havunen/babel-plugin-inferno.git",
     "scope": null,
-    "spec": ">=0.7.3 <0.8.0",
-    "type": "range"
+    "spec": "git+https://github.com/Havunen/babel-plugin-inferno.git",
+    "type": "hosted"
   },
   "_requiredBy": [
     "#DEV:/"
   ],
-  "_resolved": "http://registry.npmjs.org/babel-plugin-inferno/-/babel-plugin-inferno-0.7.3.tgz",
-  "_shasum": "1856d52e844899dcb455ccd92dc806060940720c",
+  "_resolved": "git+https://github.com/Havunen/babel-plugin-inferno.git#22f044628fca7ac10863e97a7e6a235d599833b2",
+  "_shasum": "3b80b3f833ebb5de62c89941ce25f455edd2dbe9",
   "_shrinkwrap": null,
-  "_spec": "babel-plugin-inferno@^0.7.3",
-  "_where": "C:\\GIT\\inferno",
+  "_spec": "babel-plugin-inferno@git+https://github.com/Havunen/babel-plugin-inferno.git",
+  "_where": "C:\\Git\\Severa\\UI",
   "bugs": {
     "url": "https://github.com/trueadm/babel-plugin-inferno/issues"
   },
@@ -47,18 +46,13 @@
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
-    "babel-eslint": "^6.0.5",
+    "babel-eslint": "^6.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
-    "eslint": "^2.13.1",
+    "eslint": "^3.0.1",
     "mocha": "^2.5.3"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "1856d52e844899dcb455ccd92dc806060940720c",
-    "tarball": "https://registry.npmjs.org/babel-plugin-inferno/-/babel-plugin-inferno-0.7.3.tgz"
-  },
-  "gitHead": "a74e3c4fe463e13df458bf2e336132b2b5ba9932",
+  "gitHead": "22f044628fca7ac10863e97a7e6a235d599833b2",
   "homepage": "https://github.com/trueadm/babel-plugin-inferno#readme",
   "keywords": [
     "babel-plugin",
@@ -70,15 +64,10 @@
   ],
   "license": "MPL-2.0",
   "main": "lib/index.js",
-  "maintainers": [
-    {
-      "email": "dg@domgan.com",
-      "name": "trueadm"
-    }
-  ],
   "name": "babel-plugin-inferno",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
+  "readme": "# InfernoJS Babel Plugin\r\n\r\n> Plugin for babel 6.x to enable JSX for Inferno\r\n\r\nThis plugin transforms JSX code in your projects to [Inferno](https://github.com/trueadm/inferno) compatible virtual DOM. \r\n\r\n**Note!* This plugin has been built for use in Babel 6.x environments, and will not work with Babel 5.x ( *deprecated*) or older versions.\r\n\r\n## How to install\r\n\r\n```js\r\nnpm i --save-dev babel-plugin-inferno\r\n\r\n```\r\n\r\n## How to use\r\n\r\nAdd the plugin to your `package.json` and update the plugin section in your `.babelrc` file. Or if your Babel settings are located inside the `package.json` - update the plugin section there.\r\n\r\nIt's important that you also include the `babel-plugin-syntax-jsx`plugin.\r\n\r\nExample on a `.babelrc` file that will work with Inferno:\r\n\r\n\r\n```js\r\n{   \r\n    \"presets\": [ \"es2015\" ],\r\n    \"plugins\": [\"inferno\"]\r\n}\r\n```\r\n\r\n## Examples    \r\n\r\n```js\r\n\r\n// Render a simple div\r\nInfernoDOM.render(<div></div>, container); \r\n\r\n// Render a div with text\r\nInfernoDOM.render(<div>Hello world</div>, container); \r\n\r\n// Render a div with a boolean attribute\r\nInfernoDOM.render(<div autoFocus='true' />, container);\r\n\r\n```\r\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trueadm/babel-plugin-inferno.git"
@@ -87,5 +76,5 @@
     "lint": "eslint lib",
     "test": "mocha --compilers js:babel/register"
   },
-  "version": "0.7.3"
+  "version": "0.7.2"
 }
